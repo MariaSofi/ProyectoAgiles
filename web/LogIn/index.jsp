@@ -29,7 +29,7 @@
 
             <h3 class="text-md-center">Regístrate </h3>           
             <hr>  
-            <form action="principal.jsp" method="POST">
+            <form action="../servletFinal2" method="POST">
 
                 <div class="row" >
 
@@ -75,7 +75,7 @@
                         </p>
                         <%-- CONTRASEÑA --%>
                         <label > Contraseña:</label>
-                        <input class="form-control" id="contra1" type="password" name="txtContraseña1" placeholder="" required=""> 
+                        <input class="form-control" id="contra1" type="password" name="txtContrasenia1" placeholder="" required=""> 
 
                     </div>      
                 </div> 
@@ -85,7 +85,7 @@
                         </p>
                         <%-- REPITA CONTRASEÑA --%>
                         <label > Repita contraseña:</label>
-                        <input class="form-control" id="contra2" type="password" name="txtContraseña2" placeholder="" required=""> 
+                        <input class="form-control" id="contra2" type="password" name="txtContrasenia2" placeholder="" required=""> 
 
                     </div> 
                     <div class="col-md-3 offset-md-1">

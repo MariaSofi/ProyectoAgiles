@@ -25,7 +25,7 @@
             
             <hr>
             
-            <form action="servletProyectoFinal" method="post">
+            <form action="../sevletFinal" method="post">
                 <div class="row" >
                     <%-- CAMPOS PARA REGISTRARSE --%>
                     <div class="col">
@@ -40,7 +40,7 @@
                     <div class="col">
                         <%-- NOMBRE --%>
                         <label>Contraseña: </label>
-                        <input class="form-control"   type="password" name="txtContraseña" placeholder="" required="">    
+                        <input class="form-control"   type="password" name="txtContrasenia" placeholder="" required="">    
                     </div>
                 </div>            
                 

@@ -9,7 +9,6 @@ import config.Consultas;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,8 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author sofi
  */
-@WebServlet(name = "servletProyectoFinal", urlPatterns = {"/servletProyectoFinal"})
-public class servletProyectoFinal extends HttpServlet {
+public class servletFinal2 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,13 +34,17 @@ public class servletProyectoFinal extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         String cor = request.getParameter("txtCorreo");
-        String con = request.getParameter("txtContraseña");
+        String con = request.getParameter("txtContrasenia1");
+        String nom = request.getParameter("txtnom");
+        String apell = request.getParameter("txtApellido");
+        String edad  = request.getParameter("campoFecha");
         
         Consultas co = new Consultas();
-        if(co.autenticacion(cor, con)){
-            response.sendRedirect("principal.jsp");
+        
+        if(co.registrar(cor, con, nom, apell, edad)){
+            response.sendRedirect("LogIn/inicioSesion.jsp");
         }else{
-            response.sendRedirect("inicioSesion.jsp");
+            response.sendRedirect("LogIn/index.jsp");
         }
         
     }

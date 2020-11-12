@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
+
 /**
  *
  * @author sofi
@@ -16,12 +18,13 @@ public class Usuarios {
     private String contraseña; 
     private String nombre;
     private String apellido;
-    private int edad;
+    private String edad;
 
     public Usuarios() {
+        
     }
    
-    public Usuarios(String correo, String contraseña, String nombre, String apellido, int edad) {
+    public Usuarios(String correo, String contraseña, String nombre, String apellido, String edad) {
         this.correo = correo;
         this.contraseña = contraseña;
         this.nombre = nombre;
@@ -62,11 +65,11 @@ public class Usuarios {
         this.apellido = apellido;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 

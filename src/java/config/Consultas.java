@@ -39,7 +39,7 @@ public class Consultas extends Conexion{
     }
     
     
-    public boolean registrar(String correo,String contraseña,String nombre,String apellido, int edad) throws SQLException{
+    public boolean registrar(String correo,String contraseña,String nombre,String apellido, String edad){
         
         PreparedStatement pst = null;
         
@@ -50,19 +50,19 @@ public class Consultas extends Conexion{
             pst.setString(2, contraseña);
             pst.setString(3, nombre);
             pst.setString(4, apellido);
-            pst.setInt(5, edad);
+            pst.setString(5, edad);
             
             if(pst.executeUpdate() == 1 ){
                 return true;
             }
             
-        } catch (SQLException ex) {
+        } catch (Exception ex) {
             System.err.println("Error" + ex);
         }finally{
             try {
                 if(getConexion() !=null )getConexion().close();
                 if(pst != null)pst.close();
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 System.err.println("Error" + e);
             }
             
@@ -75,9 +75,10 @@ public class Consultas extends Conexion{
         Consultas co = new Consultas();
         System.out.println(co.registrar("gerakk@gmail", "12345", "gerardo", "kkvazos", 22));
     }*/
-        public static void main(String[] args) throws Exception{
+   /*     public static void main(String[] args) throws Exception{
         Consultas co = new Consultas();
         System.out.println(co.autenticacion("gerak@gmail", "12345"));
-    }
+    }*/
+    
 }
 
