@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4/11/2020, 09:03:24 PM
+    Author     : sofi
+*/
+div2{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+h1 {
+    background-color: tomato !important;
+}
+
+.color{
+    
+}
+
+section{
+    height: 60px;
+    background-color: violet;
+}
+
+.fondo{
+    background-image: url('../imagenes/img.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
