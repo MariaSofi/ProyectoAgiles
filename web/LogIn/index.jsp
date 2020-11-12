@@ -19,6 +19,21 @@
         <title>Bienvenido al sistema de Asistencia</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link href="../css/estilos.css" rel="stylesheet" type="text/css" >
+    
+        <script>
+            funcion comprobarContraseña(){
+                clave1 = document.f1.txtContrasenia1.value;
+                clave2 = document.f1.txtContrasenia2.value;
+                
+                if(clave1 == clave2)
+                    alert("Contraseñas correctas")
+                    
+                else
+                    alert("Contraseñas incorrectas, no coinciden")
+   
+            }
+            
+        </script> 
     </head>
     <body>
         <div  class="container "  >

@@ -25,13 +25,13 @@
             
             <hr>
             
-            <form action="../sevletFinal" method="post">
+            <form action="../sevletFinal" method="post" id="formularioInicio">
                 <div class="row" >
                     <%-- CAMPOS PARA REGISTRARSE --%>
                     <div class="col">
                         <%-- NOMBRE --%>
                         <label>Correo Electronico: </label>
-                        <input class="form-control"   type="email" name="txtCorreo" placeholder="example@gmail.com" required="">
+                        <input class="form-control" id="correo"   type="email" name="txtCorreo" placeholder="example@gmail.com" required="">
 
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                     <div class="col">
                         <%-- NOMBRE --%>
                         <label>Contraseña: </label>
-                        <input class="form-control"   type="password" name="txtContrasenia" placeholder="" required="">    
+                        <input class="form-control" id="contrasenia"   type="password" name="txtContrasenia" placeholder="" required="">    
                     </div>
                 </div>            
                 
@@ -50,7 +50,7 @@
                     <p>
                         
                     </p>
-                    <button class="btn btn-light"  type="submit" name="btnAceptar" >Iniciar</button>
+                    <button class="btn btn-light" id="aceptar"  type="submit" name="btnAceptar" >Iniciar</button>
                              
                 </div>
                  </form>      

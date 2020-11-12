@@ -32,3 +32,7 @@ section{
     background-size: cover;
     background-position: center;
 }
+body{
+    background-image: linear-gradient(to right bottom, #FAEAFF, #DED5EA);
+    
+}
