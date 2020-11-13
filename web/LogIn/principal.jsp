@@ -6,12 +6,21 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    HttpSession objsesion = request.getSession(false);
+    String corr = (String)objsesion.getAttribute("txtCorreo");
+    if(corr.equals("")){
+        response.sendRedirect("LogIn/inicioSesion.jsp");
+        
+    }
+    
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>AHORA ESTAS EN LA PAGINA PRINCIPAL</title>
     </head>
     <body>
-        <h1> BIENVENIDO PROFE </h1>
+        <h1> BIENVENIDO <% out.print(corr); %> </h1>
     </body>
 </html>

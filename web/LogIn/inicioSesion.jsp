@@ -16,10 +16,12 @@
         <link href="../css/estilos.css" rel="stylesheet" type="text/css" >
         <link href="imagenes">
         <title>Inicio</title>
+        <script src="../js/main.js"></script>
     </head>
-    <body background="fondo">
-        <div class="container">           
-            <div class="w3-panel w3-blue bg-primary" >
+    <body class="bg1" >
+       
+        <div class="container chuchita">           
+            <div class="w3-panel w3-blue bg-primary " >
                 
             <h3 class="text-md-center">Inicio de Sesión</h3>   
             
@@ -75,5 +77,7 @@
         
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    </body>
+    
+        
+        </body>
 </html>

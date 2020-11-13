@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -40,7 +41,9 @@ public class sevletFinal extends HttpServlet {
         
         Consultas co = new Consultas();
         if(co.autenticacion(cor, con)){
-                
+            HttpSession objsesion = request.getSession(true);
+            objsesion.setAttribute("txtCorreo", cor);
+            
             response.sendRedirect("LogIn/principal.jsp");
         }else{
             

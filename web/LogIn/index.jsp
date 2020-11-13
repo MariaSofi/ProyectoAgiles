@@ -20,23 +20,12 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link href="../css/estilos.css" rel="stylesheet" type="text/css" >
     
-        <script>
-            funcion comprobarContraseña(){
-                clave1 = document.f1.txtContrasenia1.value;
-                clave2 = document.f1.txtContrasenia2.value;
-                
-                if(clave1 == clave2)
-                    alert("Contraseñas correctas")
-                    
-                else
-                    alert("Contraseñas incorrectas, no coinciden")
-   
-            }
-            
-        </script> 
+
     </head>
-    <body>
-        <div  class="container "  >
+    <body >
+        <div class="bg">
+        <div  class="container chuchita" >
+        
             <div class="w3-panel w3-blue bg-primary"> 
             
             
@@ -133,6 +122,6 @@
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>    
-
+        </div>
     </body>
 </html>

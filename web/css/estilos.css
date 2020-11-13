@@ -25,14 +25,37 @@ section{
     background-color: violet;
 }
 
-.fondo{
-    background-image: url('../imagenes/img.jpg');
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-body{
-    background-image: linear-gradient(to right bottom, #FAEAFF, #DED5EA);
+
+body, html{
+    height: 100%;
     
+    
+}
+
+.bg{
+    
+    background-image: url("https://k61.kn3.net/taringa/F/C/F/1/0/2/Funky_Dung/B4B.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    
+}
+
+.bg1{
+    
+    background-image: url("https://www.wallpapertip.com/wmimgs/91-917056_fondos-de-pantalla-paisajes-4k.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    
+}
+
+.chuchita{
+    width: 800px ;
+    align-self: center;
+    opacity: 90%;
 }
