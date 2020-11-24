@@ -16,7 +16,7 @@ private String HOST = "localhost";
 private String PORT = "3306";
 private String DATABASE = "sistemaasistencias";  
 private String CLASSNAME = "com.mysql.jdbc.Driver";
-private String URL = "jdbc:mysql://"+ HOST+ ":"+PORT+"/"+DATABASE;
+private String URL = "jdbc:mysql://localhost:3306/sistemaasistencias?zeroDateTimeBehavior=convertToNull" ;// "jdbc:mysql://"+ HOST+ ":"+PORT+"/"+DATABASE;
 private Connection con;
   
   public Conexion(){

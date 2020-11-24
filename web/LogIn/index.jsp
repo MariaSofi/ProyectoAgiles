@@ -28,7 +28,6 @@
         
             <div class="w3-panel w3-blue bg-primary"> 
             
-            
             <p class=""></p>
 
             <h3 class="text-md-center">Regístrate </h3>           

@@ -38,13 +38,16 @@ public class servletFinal2 extends HttpServlet {
         String con = request.getParameter("txtContrasenia1");
         String nom = request.getParameter("txtnom");
         String apell = request.getParameter("txtApellido");
-        String edad  = request.getParameter("campoFecha");
+        String fecha  = request.getParameter("campoFecha");
         
         Consultas co = new Consultas();
+        System.out.println("Entra" + cor + con + nom + apell + fecha);
         
-        if(co.registrar(cor, con, nom, apell, edad)){
+        if(co.registrar(cor, con, nom, apell, fecha)){
             response.sendRedirect("LogIn/inicioSesion.jsp");
+            System.out.println("Entra al if");
         }else{
+            System.out.println("Entra al else");
             response.sendRedirect("LogIn/index.jsp");
         }
         

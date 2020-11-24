@@ -7,7 +7,7 @@
 window.addEventListener('load', function (){
     document.getElementById("aceptar").addEventListener('click', function (){
         alert('click....');
-        var correo = document.getElementById('correo').value;
+        var correo = document.getElementById('txtCorreo').value;
         var contra = document.getElementById('contrasenia').value;
         var b = false;
         if(correo.length > 0 && contra.length > 0){

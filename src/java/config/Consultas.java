@@ -39,18 +39,21 @@ public class Consultas extends Conexion{
     }
     
     
-    public boolean registrar(String correo,String contraseña,String nombre,String apellido, String edad){
+    public boolean registrar(String correo,String contraseña,String nombre,String apellido, String fecha){
         
         PreparedStatement pst = null;
         
         try {
-            String consulta = "insert into usuarios (correo, contraseña, nombre, apellido, edad) values (?,?,?,?,?)";
+            
+            System.out.println("AL 100");
+            System.out.println(correo+ "," + contraseña+ "," + nombre+ "," + apellido+ "," +fecha);
+            String consulta = "insert into usuarios (correo, contraseña, nombre, apellido, fecha) values (?,?,?,?,?)";
             pst = getConexion().prepareStatement(consulta);
             pst.setString(1, correo);
             pst.setString(2, contraseña);
             pst.setString(3, nombre);
             pst.setString(4, apellido);
-            pst.setString(5, edad);
+            pst.setString(5, fecha);
             
             if(pst.executeUpdate() == 1 ){
                 return true;

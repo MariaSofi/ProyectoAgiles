@@ -42,8 +42,7 @@ public class sevletFinal extends HttpServlet {
         Consultas co = new Consultas();
         if(co.autenticacion(cor, con)){
             HttpSession objsesion = request.getSession(true);
-            objsesion.setAttribute("txtCorreo", cor);
-            
+            objsesion.setAttribute("txtCorreo", cor);        
             response.sendRedirect("LogIn/principal.jsp");
         }else{
             
