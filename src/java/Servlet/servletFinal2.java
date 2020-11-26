@@ -36,20 +36,35 @@ public class servletFinal2 extends HttpServlet {
         
         String cor = request.getParameter("txtCorreo");
         String con = request.getParameter("txtContrasenia1");
+        String con2 = request.getParameter("txtContrasenia2");
         String nom = request.getParameter("txtnom");
         String apell = request.getParameter("txtApellido");
         String fecha  = request.getParameter("campoFecha");
         
         Consultas co = new Consultas();
         System.out.println("Entra" + cor + con + nom + apell + fecha);
+        /*
+        session
+        */
         
-        if(co.registrar(cor, con, nom, apell, fecha)){
-            response.sendRedirect("LogIn/inicioSesion.jsp");
+        if(request.getParameter("txtContrasenia1") == null ? request.getParameter("txtContrasenia2") == null : request.getParameter("txtContrasenia1").equals(request.getParameter("txtContrasenia2"))){         
+             co.registrar(cor, con, nom, apell, fecha);
+             response.sendRedirect("LogIn/inicioSesion.jsp");
+             System.out.println("registra la contrasenia");
+            /*if(co.registrar(cor, con, nom, apell, fecha)){
+            
             System.out.println("Entra al if");
-        }else{
+            }*/
+            }else{
             System.out.println("Entra al else");
             response.sendRedirect("LogIn/index.jsp");
+            
         }
+            
+            
+        
+        
+       
         
     }
 

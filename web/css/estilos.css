@@ -59,3 +59,34 @@ body, html{
     align-self: center;
     opacity: 90%;
 }
+
+
+header h1{
+    background: bisque;
+    flex-direction: column;
+    text-align: 50px;
+    font-size: 30px;
+    line-height: 100px;
+}
+
+.margenes{
+    margin: 0px;
+    padding: 0px;
+}
+nav h2{
+    width: 300px;
+    height: 500px;
+    background: blue;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+section{
+    width: 1580px;
+    height: 500px;
+    background: gold;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: left;
+}
