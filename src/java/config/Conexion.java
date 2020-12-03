@@ -19,7 +19,7 @@ private String CLASSNAME = "com.mysql.jdbc.Driver";
 private String URL = "jdbc:mysql://localhost:3306/sistemaasistencias?zeroDateTimeBehavior=convertToNull" ;// "jdbc:mysql://"+ HOST+ ":"+PORT+"/"+DATABASE;
 private Connection con;
   
-  public Conexion(){
+  public  Conexion(){
       try {
           Class.forName(CLASSNAME);
           con = DriverManager.getConnection(URL, USERNAME, PASSWORD);

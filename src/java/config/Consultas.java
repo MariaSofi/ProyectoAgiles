@@ -1,5 +1,6 @@
 package config;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -73,15 +74,46 @@ public class Consultas extends Conexion{
         }
         return false;
     }
-
-/*    public static void main(String[] args) throws Exception{
+    
+    public boolean registrarGrupo(String nombreMateria,int unidades,String dia ,String link, String hora){
+        PreparedStatement pst = null;
+        try {
+            System.out.println( nombreMateria+"," + unidades + "," + dia +"," + link + "," + hora);
+            String consulta = "insert into grupos(nombre, unidades, dias, link, hora) values(?,?,?,?,?)";
+            pst = getConexion().prepareStatement(consulta);
+            pst.setString(1, nombreMateria);
+            pst.setInt(2, unidades);
+            pst.setString(3, dia);
+            pst.setString(4,link);
+            pst.setString(5, hora);
+            if(pst.executeUpdate() == 1 ){
+                return true;
+            }
+        } catch (Exception e) {
+            System.err.println("Error" + e);
+        }finally{
+            try{
+                if(getConexion() !=null)getConexion().close(); 
+                if(pst != null)pst.close();
+            }catch(Exception e){
+                System.err.println("Error" + e);
+            }
+        }
+        return false;
+    }
+    
+    
+/*
+   public static void main(String[] args) throws Exception{
         Consultas co = new Consultas();
-        System.out.println(co.registrar("gerakk@gmail", "12345", "gerardo", "kkvazos", 22));
+        System.out.println(co.registrarGrupo("agiles", 4, "Lunes", "dddwda", "dwadwadaw"));
     }*/
    /*     public static void main(String[] args) throws Exception{
         Consultas co = new Consultas();
         System.out.println(co.autenticacion("gerak@gmail", "12345"));
     }*/
     
-}
 
+   
+       
+   }
